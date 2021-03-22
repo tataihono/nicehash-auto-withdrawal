@@ -10,7 +10,7 @@ async function main() {
     });
     await instance.testAuthorization();
     const balance = await instance.getBalance();
-    if (balance > 0) {
+    if (balance > 0.001) {
       instance.createWithdrawlRequest(
         process.env.WITHDRAWAL_ID,
         balance,
